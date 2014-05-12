@@ -3,33 +3,52 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>polymer presentation</title>
+        <title>Web Component with Google Polymer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="bower_components/ruban/css/ruban.min.css">
         <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
-    </head>
-    <body>
         <style>
+            body {
+                margin: 0;
+            }
+            section {
+                border-left: 1em solid #434343;
+                border-right: 1em solid #434343;
+            }
             pre code {
                 background-color: inherit;
+            }
+            .pagination {
+                right: 2.6em;
             }
             .logo {
                 height: 48px;
                 width: auto;
             }
+            .chapter-title {
+                background-color: #0071B5;
+                color: white;
+                border-color: white;
+            }
+            .chapter-title strong {
+                font-weight: 800;
+                text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
+            }
         </style>
-
-        <section>
-            <h1>Web Component & Google Polymer</h1>
+    </head>
+    <body>
+        <section class="chapter-title">
+            <h1><strong>WEB COMPONENT<br>&<br>GOOGLE POLYMER</strong></h1>
         </section>
 
-        <section>
+        <section id="me">
+            <!-- TODO Add a photo of me -->
             <h1>Romain Linsolas</h1>
             <ul class="fa-ul">
                 <li><i class="fa-li fa fa-building-o"></i> Société Générale</li>
+                <li>&nbsp;</li>
                 <li><i class="fa-li fa fa-twitter" style="color: #4099FF"></i> @romaintaz</li>
                 <li><i class="fa-li fa fa-github"></i> https://github.com/linsolas</li>
                 <li><i class="fa-li fa fa-html5"></i> http://linsolas.github.io</li>
@@ -38,13 +57,11 @@
         </section>
 
         <section id="bbl">
-            <strong>Brown Bag Lunches</strong>
-            Principles
-            <ul class="fa-ul">
-                <li><i class="fa-li fa fa-envelope-o"></i> Invite an expert</li>
-                <li><i class="fa-li fa"></i> </li>
-                <li><i class="fa-li fa fa-smile-o"></i> Enjoy</li>
-            </ul>
+            <h4>Brown Bag Lunches</h4>
+            <blockquote>
+            <em>Invite an expert to make a presentation in your company during the lunch break. For a sandwich <i class="fa fa-smile-o"></i></em>
+            </blockquote>
+                <hr>
             <i class="fa fa-globe"></i> http://www.brownbaglunch.fr/
         </section>
         <section id="bbl-sg">
@@ -54,7 +71,7 @@
                 <li><i class="fa-li fa fa-star-o"></i> ~40 speakers welcomed</li>
                 <li><i class="fa-li fa fa-users"></i> Audience of ~50 people now</li>
                 <li><i class="fa-li fa fa-shopping-cart"></i> Various subjects:
-                    <ul class="fa-ul" style="font-size: 80%">
+                    <ul class="fa-ul" style="font-size: 66%">
                         <li><i class="fa-li fa fa-angle-right"></i> NoSQL databases</li>
                         <li><i class="fa-li fa fa-angle-right"></i> Alternative languages</li>
                         <li><i class="fa-li fa fa-angle-right"></i> Tests</li>
@@ -70,10 +87,10 @@
 
 
         <section class="chapter-title">
-            <h1>Why Web Components?</h1>
+            <h1><strong>Why Web Components?</strong></h1>
         </section>
         <section>
-            <h4>Example of a <strong>tab</strong> component (using Twitter Bootstrap)</h4>
+            <h4>A tab component with Twitter Bootstrap</h4>
             <pre><code class="xml">
 &lt;div class=&quot;tab-content&quot;&gt;
     &lt;div class=&quot;tab-pane active&quot; id=&quot;home&quot;&gt;...&lt;/div&gt;
@@ -96,7 +113,7 @@
         </section>
 
         <section>
-            <h6>A Twitter post:</h6>
+            <h4>A Twitter post</h4>
             <pre style="font-size: 80%">
                 <code class="xml">
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;fr&quot;&gt;
@@ -117,7 +134,7 @@
 
 
         <section class="chapter-title">
-            <h1>Creation of a Web Component</h1>
+            <h1>Creation of a <strong>Web Component</strong></h1>
         </section>
         <section>
             <h1><img src="images/Marvel.jpg"></h1>
@@ -128,22 +145,23 @@
         <section>
             <h4>Marvel Rest API</h4>
             <pre><code class="json">http://gateway.marvel.com/v1/public/characters/1009368?apikey=***
+
 { ...,
-    {
-        <strong>"id": 1009368</strong>,
-        <strong>"name": "Iron Man"</strong>,
-        <strong>"description": "Wounded, captured and forced..."</strong>,
-        "modified": "2013-11-07T10:55:38-0500",
-        "thumbnail": {
-            <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
-            <strong>"extension": "jpg"</strong>
-        },
-        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
-        "comics": { ...
+  {
+    <strong>"id": 1009368</strong>,
+    <strong>"name": "Iron Man"</strong>,
+    <strong>"description": "Wounded, captured and forced..."</strong>,
+    "modified": "2013-11-07T10:55:38-0500",
+    "thumbnail": {
+      <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
+      <strong>"extension": "jpg"</strong>
+    },
+    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+    "comics": { ...
             </code></pre>
         </section>
 
-        <section>
+        <section id="yeoman">
             <img src="images/yeoman.gif">
             <ul class="steps">
                 <li><img class="logo" src="images/yo.gif"> <strong style="margin-right: 90px">yo</strong> Project scaffolder</li>
@@ -157,18 +175,53 @@
             <h1><img src="images/start-coding.png"></h1>
         </section>
 
-
+        <section class="chapter-title">
+            <h1><strong>Alternatives</strong> to<br>Google Polymer</h1>
+        </section>
+        <section>
+            <h4>Mozilla X-Tag</h4>
+            <ul class="fa-ul">
+                <li><i class="fa fa-li fa-angle-right"></i> Based on Polymer polyfills (platform)</li>
+                <li><i class="fa fa-li fa-angle-right"></i></li>
+                <li><i class="fa fa-li fa-angle-right"></i></li>
+                <li><i class="fa fa-li fa-globe"></i> http://www.x-tags.org/</li>
+            </ul>
+        </section>
+        <section>
+            <h4>IBM Delite</h4>
+            <ul class="fa-ul">
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-globe"></i> https://github.com/ibm-js/delite</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Vanilla JS</h4>
+            <ul class="fa-ul">
+                <li><i class="fa fa-li fa-angle-right"></i> Based on VanillaJS lib (http://vanilla-js.com/)</li>
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-angle-right"></i> </li>
+            </ul>
+        </section>
 
 
         <section class="chapter-title">
-            <h1>Ready for production?</h1>
+            <h1>Ready for <strong>production</strong>?</h1>
         </section>
         <section>
-            <h4>Be careful</h4>
+            <h4>Be careful!</h4>
             <ul class="fa-ul steps">
-                <li><i class="fa fa-li fa-pencil-square-o"></i> Standard in progress</li>
+                <li><i class="fa fa-li fa-pencil-square-o"></i> Standards  in progress</li>
                 <li><i class="fa fa-li fa-flask"></i> Polymer - or alternatives - still in beta</li>
                 <li><i class="fa fa-li fa-check-square-o"></i> Browser compatibility</li>
+                <li>
+                    <ul class="fa-ul" style="font-size: 75%">
+                        <li><i class="fa fa-li fa-heart-o"></i> "Evergreen" browsers</li>
+                        <li><i class="fa fa-li fa-ambulance"></i> Internet Explorer 9 / 10+</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
@@ -178,36 +231,31 @@
         </section>
 
 
-        <section class="chapter-title">
-            <h1>Alternatives to Google Polymer</h1>
-        </section>
-        <section>
-            <h4>Mozilla X-Tag</h4>
-            <ul>
-                <li>Based on Polymer polyfills</li>
-                <li>http://www.x-tags.org/</li>
-            </ul>
-        </section>
-        <section>
-            <h4>IBM xxx</h4>
-        </section>
-        <section>
-            <h4>?</h4>
-        </section>
+
 
 
         <section id="references">
+            <h4>Resources</h4>
             <ul class="fa-ul">
-                <li><i class="fa-li fa fa"></i> http://www.polymer-project.org/</li>
-                <li><i class="fa-li fa fa"></i> http://www.w3.org/TR/components-intro/</li>
-                <li><i class="fa-li fa fa"></i> http://developer.marvel.com/</li>
-                <li><i class="fa-li fa fa"></i> https://github.com/linsolas/devoxx-polymer</li>
-                <li><i class="fa-li fa fa"></i></li>
+                <li><i class="fa-li fa fa-angle-right"></i> http://www.polymer-project.org/</li>
+                <li><i class="fa-li fa fa-angle-right"></i> http://www.w3.org/TR/components-intro/</li>
+                <li><i class="fa-li fa fa-angle-right"></i> http://developer.marvel.com/</li>
+                <li><i class="fa-li fa fa-angle-right"></i> https://github.com/linsolas/devoxx-polymer</li>
+                <li><i class="fa-li fa fa-angle-right"></i></li>
             </ul>
         </section>
 
-        <section id="questions">
+        <section id="links">
+            <h4>Some interesting websites</h4>
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i> http://webcomponents.org/</li>
+                <li><i class="fa-li fa fa-angle-right"></i> http://webcomponents.org/</li>
+                <li><i class="fa-li fa fa-angle-right"></i> </li>
+            </ul>
+        </section>
 
+        <section id="questions" class="chapter-title">
+            <h1><strong>Questions?</strong></h1>
         </section>
 
 
