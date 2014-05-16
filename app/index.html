@@ -36,6 +36,9 @@
                 font-weight: 800;
                 text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
             }
+            .center {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -59,9 +62,9 @@
         <section id="bbl">
             <h4>Brown Bag Lunches</h4>
             <blockquote>
-            <em>Invite an expert to make a presentation in your company during the lunch break. For a sandwich <i class="fa fa-smile-o"></i></em>
+                <em>Invite an expert to make a presentation in your company during the lunch break.<br>For a sandwich <i class="fa fa-cutlery"></i></em>
             </blockquote>
-                <hr>
+            <hr>
             <i class="fa fa-globe"></i> http://www.brownbaglunch.fr/
         </section>
         <section id="bbl-sg">
@@ -70,7 +73,7 @@
                 <li><i class="fa-li fa fa-clock-o"></i> Started january 2013</li>
                 <li><i class="fa-li fa fa-star-o"></i> ~40 speakers welcomed</li>
                 <li><i class="fa-li fa fa-users"></i> Audience of ~50 people now</li>
-                <li><i class="fa-li fa fa-shopping-cart"></i> Various subjects:
+                <li><i class="fa-li fa fa-language"></i> Various subjects:
                     <ul class="fa-ul" style="font-size: 66%">
                         <li><i class="fa-li fa fa-angle-right"></i> NoSQL databases</li>
                         <li><i class="fa-li fa fa-angle-right"></i> Alternative languages</li>
@@ -144,29 +147,29 @@
         </section>
         <section>
             <h4>Marvel Rest API</h4>
-            <pre><code class="json">http://gateway.marvel.com/v1/public/characters/1009368?apikey=***
+                    <pre><code class="json">http://gateway.marvel.com/v1/public/characters/1009368?apikey=***
 
-{ ...,
-  {
-    <strong>"id": 1009368</strong>,
-    <strong>"name": "Iron Man"</strong>,
-    <strong>"description": "Wounded, captured and forced..."</strong>,
-    "modified": "2013-11-07T10:55:38-0500",
-    "thumbnail": {
-      <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
-      <strong>"extension": "jpg"</strong>
-    },
-    "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
-    "comics": { ...
-            </code></pre>
+        { ...,
+        {
+            <strong>"id": 1009368</strong>,
+            <strong>"name": "Iron Man"</strong>,
+            <strong>"description": "Wounded, captured and forced..."</strong>,
+            "modified": "2013-11-07T10:55:38-0500",
+            "thumbnail": {
+                <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
+                <strong>"extension": "jpg"</strong>
+            },
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+            "comics": { ...
+                    </code></pre>
         </section>
 
         <section id="yeoman">
             <img src="images/yeoman.gif">
             <ul class="steps">
-                <li><img class="logo" src="images/yo.gif"> <strong style="margin-right: 90px">yo</strong> Project scaffolder</li>
-                <li><img class="logo" src="images/bower.gif"> <strong>bower</strong> Dependencies manager</li>
-                <li><img class="logo" src="images/grunt.gif"> <strong style="margin-right: 20px">grunt</strong> Tasks executor</li>
+                <li><img class="logo" src="images/yo.gif"> <span style="margin-right: 100px; font-weight: bold">yo</span> Project scaffolder</li>
+                <li><img class="logo" src="images/bower.gif"> <span style="font-weight: bold">bower</span> Dependencies manager</li>
+                <li><img class="logo" src="images/grunt.gif"> <span style="margin-right: 20px; font-weight: bold">grunt</span> Tasks executor</li>
             </ul>
         </section>
 
@@ -175,8 +178,38 @@
             <h1><img src="images/start-coding.png"></h1>
         </section>
 
+
+        <section id="standards" class="chapter-title">
+            <h1>About the Web Component <strong>standard</strong></h1>
+        </section>
+        <section>
+            <h4>The Web component is a standard... based on others standards</h4>
+            <ul class="fa-ul steps">
+                <li><i class="fa fa-li fa-angle-right"></i> Template</li>
+                <li><i class="fa fa-li fa-angle-right"></i> Custom Elements</li>
+                <li><i class="fa fa-li fa-angle-right"></i> Shadow DOM</li>
+                <li><i class="fa fa-li fa-angle-right"></i> HTML Imports</li>
+                <li><i class="fa fa-li fa-angle-right"></i> Decorators <em>(not yet a standard)</em></li>
+            </ul>
+        </section>
+        <section>
+            <h4>Solution? Use <strong>polyfills</strong></h4>
+            <ul class="steps">
+                <li>A <em>polyfill</em> is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide <span style="font-weight: bold">natively</span>.</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Platform</h4>
+            <!-- TODO Retrieve this image -->
+            <div class="center">
+                <img src="http://4.bp.blogspot.com/-rPbEdmEpHWA/UeW4Xqmg0oI/AAAAAAAAAx0/33O2gWoYMgI/s1600/polymer-architecture.jpg">
+            </div>
+            <i class="fa fa-globe"></i> https://github.com/Polymer/platform
+        </section>
+
+
         <section class="chapter-title">
-            <h1><strong>Alternatives</strong> to<br>Google Polymer</h1>
+            <h1><strong>Alternatives</strong> to<br>Google Polymer<br><i class="fa fa-random"></i></h1>
         </section>
         <section>
             <h4>Mozilla X-Tag</h4>
@@ -186,6 +219,7 @@
                 <li><i class="fa fa-li fa-angle-right"></i></li>
                 <li><i class="fa fa-li fa-globe"></i> http://www.x-tags.org/</li>
             </ul>
+            <!-- TODO Example -->
         </section>
         <section>
             <h4>IBM Delite</h4>
@@ -195,6 +229,7 @@
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
                 <li><i class="fa fa-li fa-globe"></i> https://github.com/ibm-js/delite</li>
             </ul>
+            <!-- TODO Example -->
         </section>
         <section>
             <h4>Vanilla JS</h4>
@@ -204,11 +239,12 @@
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
             </ul>
+            <!-- TODO Example -->
         </section>
 
 
         <section class="chapter-title">
-            <h1>Ready for <strong>production</strong>?</h1>
+            <h1>Ready for <strong>production</strong>?<br><i class="fa fa-space-shuttle"></i></h1>
         </section>
         <section>
             <h4>Be careful!</h4>
@@ -232,30 +268,27 @@
 
 
 
-
-
         <section id="references">
             <h4>Resources</h4>
-            <ul class="fa-ul">
+            <ul class="fa-ul" style="font-size: 80%">
                 <li><i class="fa-li fa fa-angle-right"></i> http://www.polymer-project.org/</li>
                 <li><i class="fa-li fa fa-angle-right"></i> http://www.w3.org/TR/components-intro/</li>
                 <li><i class="fa-li fa fa-angle-right"></i> http://developer.marvel.com/</li>
                 <li><i class="fa-li fa fa-angle-right"></i> https://github.com/linsolas/devoxx-polymer</li>
-                <li><i class="fa-li fa fa-angle-right"></i></li>
             </ul>
         </section>
 
+        <!-- TODO To keep? -->
         <section id="links">
             <h4>Some interesting websites</h4>
-            <ul class="fa-ul">
+            <ul class="fa-ul" style="font-size: 80%">
                 <li><i class="fa-li fa fa-angle-right"></i> http://webcomponents.org/</li>
-                <li><i class="fa-li fa fa-angle-right"></i> http://webcomponents.org/</li>
-                <li><i class="fa-li fa fa-angle-right"></i> </li>
+                <li><i class="fa-li fa fa-angle-right"></i> http://customelements.io/</li>
             </ul>
         </section>
 
         <section id="questions" class="chapter-title">
-            <h1><strong>Questions?</strong></h1>
+            <h1><strong>Questions?</strong><br><i class="fa fa-comments"></i></h1>
         </section>
 
 
@@ -264,12 +297,10 @@
         <script src="bower_components/hammerjs/hammer.min.js"></script>
         <script src="bower_components/highlightjs/highlight.pack.js"></script>
         <script src="bower_components/ruban/js/ruban.min.js"></script>
-
         <script>
             var ruban = new Ruban({
                 pagination: true
             });
         </script>
-
     </body>
 </html>
