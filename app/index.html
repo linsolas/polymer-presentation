@@ -39,6 +39,9 @@
             .center {
                 text-align: center;
             }
+            .blue, .fa-globe {
+                color: #4099FF;
+            }
         </style>
     </head>
     <body>
@@ -50,19 +53,19 @@
             <!-- TODO Add a photo of me -->
             <h1>Romain Linsolas</h1>
             <ul class="fa-ul">
-                <li><i class="fa-li fa fa-building-o"></i> Société Générale</li>
+                <li><i class="fa-li fa fa-building-o" style="color: #FE0032"></i> Société Générale</li>
                 <li>&nbsp;</li>
-                <li><i class="fa-li fa fa-twitter" style="color: #4099FF"></i> @romaintaz</li>
+                <li><i class="fa-li fa fa-twitter blue"></i> @romaintaz</li>
                 <li><i class="fa-li fa fa-github"></i> https://github.com/linsolas</li>
-                <li><i class="fa-li fa fa-html5"></i> http://linsolas.github.io</li>
-                <li><i class="fa-li fa fa-cutlery"></i> Brown Bag Lunch</li>
+                <li><i class="fa-li fa fa-html5" style="color: #E44D26"></i> http://linsolas.github.io</li>
+                <li><i class="fa-li fa fa-cutlery" style="color: silver"></i> Brown Bag Lunch</li>
             </ul>
         </section>
 
         <section id="bbl">
             <h4>Brown Bag Lunches</h4>
             <blockquote>
-                <em>Invite an expert to make a presentation in your company during the lunch break.<br>For a sandwich <i class="fa fa-cutlery"></i></em>
+                <em>Invite an expert to make a presentation in your company during the lunch break.<br>For a sandwich <i class="fa fa-cutlery" style="color: silver"></i></em>
             </blockquote>
             <hr>
             <i class="fa fa-globe"></i> http://www.brownbaglunch.fr/
@@ -71,9 +74,9 @@
             <h4>BBL @ Société Générale</h4>
             <ul class="fa-ul">
                 <li><i class="fa-li fa fa-clock-o"></i> Started january 2013</li>
-                <li><i class="fa-li fa fa-star-o"></i> ~40 speakers welcomed</li>
+                <li><i class="fa-li fa fa-star-o" style="color: orange"></i> ~40 speakers welcomed</li>
                 <li><i class="fa-li fa fa-users"></i> Audience of ~50 people now</li>
-                <li><i class="fa-li fa fa-language"></i> Various subjects:
+                <li><i class="fa-li fa fa-language blue"></i> Various subjects:
                     <ul class="fa-ul" style="font-size: 66%">
                         <li><i class="fa-li fa fa-angle-right"></i> NoSQL databases</li>
                         <li><i class="fa-li fa fa-angle-right"></i> Alternative languages</li>
@@ -158,18 +161,18 @@
             <h4>Marvel Rest API</h4>
                     <pre><code class="json">http://gateway.marvel.com/v1/public/characters/1009368?apikey=***
 
-        { ...,
-        {
-            <strong>"id": 1009368</strong>,
-            <strong>"name": "Iron Man"</strong>,
-            <strong>"description": "Wounded, captured and forced..."</strong>,
-            "modified": "2013-11-07T10:55:38-0500",
-            "thumbnail": {
-                <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
-                <strong>"extension": "jpg"</strong>
-            },
-            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
-            "comics": { ...
+{ ...,
+    {
+        <strong>"id": 1009368</strong>,
+        <strong>"name": "Iron Man"</strong>,
+        <strong>"description": "Wounded, captured and forced..."</strong>,
+        "modified": "2013-11-07T10:55:38-0500",
+        "thumbnail": {
+            <strong>"path": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55"</strong>,
+            <strong>"extension": "jpg"</strong>
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009368",
+        "comics": { ...
                     </code></pre>
         </section>
 
@@ -224,8 +227,6 @@
             <h4>Mozilla X-Tag</h4>
             <ul class="fa-ul">
                 <li><i class="fa fa-li fa-angle-right"></i> Based on Polymer polyfills (platform)</li>
-                <li><i class="fa fa-li fa-angle-right"></i></li>
-                <li><i class="fa fa-li fa-angle-right"></i></li>
                 <li><i class="fa fa-li fa-globe"></i> http://www.x-tags.org/</li>
             </ul>
             <!-- TODO Example -->
@@ -234,8 +235,6 @@
             <h4>IBM Delite</h4>
             <ul class="fa-ul">
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
-                <li><i class="fa fa-li fa-angle-right"></i> </li>
-                <li><i class="fa fa-li fa-angle-right"></i> </li>
                 <li><i class="fa fa-li fa-globe"></i> https://github.com/ibm-js/delite</li>
             </ul>
             <!-- TODO Example -->
@@ -243,10 +242,10 @@
         <section>
             <h4>Vanilla JS</h4>
             <ul class="fa-ul">
-                <li><i class="fa fa-li fa-angle-right"></i> Based on VanillaJS lib (http://vanilla-js.com/)</li>
+                <li><i class="fa fa-li fa-angle-right"></i> Based on VanillaJS lib</li>
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
                 <li><i class="fa fa-li fa-angle-right"></i> </li>
-                <li><i class="fa fa-li fa-angle-right"></i> </li>
+                <li><i class="fa fa-li fa-globe"></i> http://vanilla-js.com/</li>
             </ul>
             <!-- TODO Example -->
         </section>
@@ -263,8 +262,8 @@
                 <li><i class="fa fa-li fa-check-square-o"></i> Browser compatibility</li>
                 <li>
                     <ul class="fa-ul" style="font-size: 75%">
-                        <li><i class="fa fa-li fa-heart-o"></i> "Evergreen" browsers</li>
-                        <li><i class="fa fa-li fa-ambulance"></i> Internet Explorer 9 / 10+</li>
+                        <li><i class="fa fa-li fa-heart-o" style="color: green"></i> "Evergreen" browsers</li>
+                        <li><i class="fa fa-li fa-ambulance" style="color: red"></i> Internet Explorer 9 / 10+</li>
                     </ul>
                 </li>
             </ul>
