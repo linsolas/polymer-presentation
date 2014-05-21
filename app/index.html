@@ -16,6 +16,7 @@
             section {
                 border-left: 1em solid #434343;
                 border-right: 1em solid #434343;
+                
             }
             pre code {
                 background-color: inherit;
@@ -69,13 +70,15 @@
             <blockquote>
                 <em>Invite an expert to make a presentation in your company during the lunch break.<br>For a sandwich <i class="fa fa-cutlery" style="color: silver"></i></em>
             </blockquote>
-            <hr>
-            <i class="fa fa-globe"></i> http://www.brownbaglunch.fr/
+            <ul class="steps">
+                <li><i class="fa fa-users"></i> Now 120 "baggers" in 16 cities in France</li>
+                <li><i class="fa fa-globe"></i> http://www.brownbaglunch.fr/</li>
+            </ul>
         </section>
         <section id="bbl-sg">
             <h4>BBL @ Société Générale</h4>
             <ul class="fa-ul">
-                <li><i class="fa-li fa fa-clock-o"></i> Started january 2013</li>
+                <li><i class="fa-li fa fa-clock-o"></i> Started in january 2013</li>
                 <li><i class="fa-li fa fa-star-o" style="color: orange"></i> ~40 speakers welcomed</li>
                 <li><i class="fa-li fa fa-users"></i> Audience of ~50 people now</li>
                 <li><i class="fa-li fa fa-language blue"></i> Various subjects:
@@ -295,6 +298,10 @@
             <h1><strong>Questions?</strong><br><i class="fa fa-comments"></i></h1>
         </section>
 
+        <section class="chapter-title">
+            <h4 style="margin: 0; padding: 0;">https://github.com/linsolas/polymer-presentation</h4>
+        </section>
+
 
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/keymaster/keymaster.js"></script>
@@ -303,7 +310,8 @@
         <script src="bower_components/ruban/js/ruban.min.js"></script>
         <script>
             var ruban = new Ruban({
-                pagination: true
+                pagination: true,
+                ratio: 4/3
             });
         </script>
     </body>
